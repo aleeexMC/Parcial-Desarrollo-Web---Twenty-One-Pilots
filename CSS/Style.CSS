@@ -1,7 +1,5 @@
 
 
-
-
 *{
   margin: 0;
   padding: 0;
@@ -18,7 +16,7 @@ body {
   color: white;
 }
 
-/*estilo para movil*/
+
 
 header nav{
   width: 100%;
@@ -120,7 +118,7 @@ ul:not(header ul) li:nth-child(6) {
 }
 
 
-/* Estilos para integrantes */
+
 .desarrolladores {
   width: 60%;
   float: left;
@@ -272,7 +270,7 @@ footer p {
   }
 }
 
-/* Para tablets */
+
 @media screen and (max-width: 1024px) and (min-width: 769px) {
   
   ul:not(header ul) {
