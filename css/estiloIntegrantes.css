@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    background-image: url('../img/fondo_integrantes.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Contenedor principal para centrar el contenido */
+#contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+
+nav {
+    background-color: #000000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+nav li {
+    padding: 0 0.8rem;
+    white-space: nowrap;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 1rem 0;
+    display: block;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #b22222;
+}
+
+#logo {
+    height: 35px;
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+#contenedor_logo {
+    padding: 0 1.5rem;
+}
+
+#contenedor_logo:hover #logo {
+    transform: scale(1.05);
+}
+
+/* ESTILOS DE CABECERA Y TÍTULOS DE SECCIÓN */
+
+/* Títulos de las subsecciones */
+section h2 {
+    font-family: 'Bokor', serif;
+    font-size: 2.9rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#miembros-actuales h2,
+#miembros-anteriores h2 {
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff;
+}
+
+/* ESTILOS DE LAS TARJETAS DE INTEGRANTEA */
+
+
+#miembros-actuales>div,
+#miembros-anteriores>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilos base para todas las tarjetas de miembros */
+.card-miembro-actual,
+.card-miembro-anterior {
+    padding: 0;
+    border-radius: 0px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 320px;
+    width: 300px;
+    margin: 1rem;
+}
+
+.card-miembro-actual:hover,
+.card-miembro-anterior:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos específicos para miembros ACTUALES */
+.card-miembro-actual {
+    background: #520308;
+    border: 12px solid #520308;
+    position: relative;
+}
+
+.card-miembro-actual h3 {
+    font-family: 'Bokor', serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 1rem 1rem 0.3rem 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.card-miembro-actual .rol-miembro {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 0 1rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Estilos específicos para miembros ANTERIORES */
+.card-miembro-anterior {
+    background: #520308;
+    border: 12px solid #520308;
+    position: relative;
+}
+
+.card-miembro-anterior h3 {
+    font-family: 'Bokor', serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 1rem 1rem 0.3rem 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.card-miembro-anterior .rol-miembro {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 0 1rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Imagen del Miembro */
+.foto-miembro {
+    width: 100%;
+    height: 200px;
+    border-radius: 0;
+    object-fit: cover;
+    object-position: center top;
+    margin: 0;
+    display: block;
+    border: none;
+}
+
+
+.card-miembro-actual .años-actividad,
+.card-miembro-anterior .años-actividad {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0.3rem 1rem 1rem 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+
+
+/* Estilos para el párrafo principal */
+section p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* Título principal */
+section h1 {
+    font-family: 'Bokor', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
