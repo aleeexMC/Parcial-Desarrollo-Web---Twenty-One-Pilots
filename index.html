@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twenty One Pilots</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
     <header>
+        <input type="checkbox" name="checkMenu" id="checkMenu">
+        <label for="checkMenu" class="labelBotonMenu">
+            <i class="fa fa-navicon" id="btnMostrar"></i>
+        </label>
         <nav>
             <ul>
                 <li><a href="#">INTEGRANTES</a></li>
@@ -22,10 +27,11 @@
                 <li><a href="#">CALENDARIO</a></li>
                 <li><a href="#">NOSOTROS</a></li>
                 <li><a href="#">CONTACTO</a></li>
+                <li><label for="checkMenu" class="labelBotonMenu">CERRAR</label></li>
             </ul>
         </nav>
         <div id="portada">
-            <div id="degradado"></div>
+            <div id="degradado_barra_nav"></div>
             <div id="titulo">
                 <img src="img/Markword.png" alt="Twenty One Pilots" id="markword">
                 <a href="https://open.spotify.com/artist/3YQKmKGau1PzlVlkL1iodx" target="_blank">Escucha ahora</a>
@@ -33,23 +39,28 @@
         </div>
     </header>
     <main>
-        <div id="breach">
-            <div id="nuevo_album">
+        <div id="nuevo_album">
+            <div id="breach">
                 <p>BREACH</p>
                 <p>YA DISPONIBLE</p>
                 <a href="https://open.spotify.com/album/1El3k8dU3sKyoGUeuyrolH" target="_blank">ESCÚCHALO AHORA</a>
             </div>
             <div>
-                <img src="img/PosterBreach.png" alt="Portada álbum 'Breacher'">
+                <img src="img/PosterBreach.png" alt="Portada álbum 'Breacher'" id="breach_portada">
             </div>
         </div>
-        <div id="city_walls">
+        <div id="nuevo_single">
             <div>
                 <p>
-                "City Walls no es un videoclip cualquiera. Con una duración de casi diez minutos viene a poner el cierre
-                a todo el lore de Dema, la narrativa que el grupo ha venido desarrollando en sus últimos trabajos y que
-                tiene su conclusión en Breach, el quinto álbum del grupo que lanzaban una hora antes que el videoclip."
-                <br><a href="https://los40.com/2025/09/12/city-walls-el-video-mas-caro-de-la-historia-de-twenty-one-pilots-cierra-la-historia-de-dema/" target="_blank">- Cristina Zavala, periodista</a>
+                    "City Walls no es un videoclip cualquiera. Con una duración de casi diez minutos viene a poner el
+                    cierre
+                    a todo el lore de Dema, la narrativa que el grupo ha venido desarrollando en sus últimos trabajos y
+                    que
+                    tiene su conclusión en Breach, el quinto álbum del grupo que lanzaban una hora antes que el
+                    videoclip."
+                    <br><a
+                        href="https://los40.com/2025/09/12/city-walls-el-video-mas-caro-de-la-historia-de-twenty-one-pilots-cierra-la-historia-de-dema/"
+                        target="_blank">- Cristina Zavala, periodista</a>
                 </p>
             </div>
             <div>
