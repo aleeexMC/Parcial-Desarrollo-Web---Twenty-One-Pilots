@@ -70,16 +70,16 @@
     #btnMostrar {
         background-color: black;
         color: white;
-        position: absolute;
+        position: fixed;
         cursor: pointer;
         font-size: 7vw;
         padding: 2%;
+        z-index: 10000;
+        top: 0;
+        left: 0;
     }
 
-    #btnMostrar {
-        margin-top: 2%;
-        margin-left: 2%;
-    }
+
 
     header nav {
         position: fixed;
@@ -90,6 +90,8 @@
         background-color: black;
         left: -40vw;
         transition: all 0.5s;
+        z-index: 9999;
+        top: 0;
     }
 
     #checkMenu:checked~nav {

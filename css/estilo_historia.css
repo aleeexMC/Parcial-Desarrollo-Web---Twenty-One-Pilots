@@ -88,8 +88,8 @@ p {
     content: '';
     position: absolute;
     left: 24.5px;
-    top: 13rem;
-    bottom: 16rem;
+    top: 11rem;
+    bottom: 14rem;
     width: 3px;
     background: linear-gradient(to bottom, #ff0000, #cc0000);
     border-radius: 2px;
@@ -175,7 +175,141 @@ p {
     display: flex;
     align-items: center;
     line-height: 1.6;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #ffffff;
     font-weight: 200;
+}
+
+/* Media Queries para Tabletas */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .timeline-contenedor {
+        padding-left: 0;
+    }
+
+    /* Oculta la línea roja en tablet para redistribuir espcaio */
+    .timeline-contenedor::before {
+        display: none;
+    }
+
+    /* Se ocultan los puntos en tableta */
+    .timeline-card::before,
+    .timeline-card:nth-child(even)::before {
+        display: none;
+    }
+
+    .timeline-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .timeline-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .timeline-contenido {
+        flex-direction: column;
+        max-width: 600px;
+        order: 2;
+    }
+
+    .timeline-card>div {
+        font-size: 1.8rem;
+        order: 1;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .timeline-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .timeline-contenido p {
+        font-size: 0.85rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Media Queries para Celular incluso apra nokias  */
+@media screen and (max-width: 480px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .timeline-contenedor {
+        padding-left: 0;
+    }
+
+    /* Lo mismo q el anterior se quita la línea de tiempo en cel */
+    .timeline-contenedor::before {
+        display: none;
+    }
+
+    /* Se quitan los puntos rojos */
+    .timeline-card::before,
+    .timeline-card:nth-child(even)::before {
+        display: none;
+    }
+
+    .timeline-card {
+        flex-direction: column;
+        margin-bottom: 3rem;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .timeline-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .timeline-card>div {
+        order: 1;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-contenido {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 1rem;
+        order: 2;
+    }
+
+    .timeline-img {
+        width: 100%;
+        height: 180px;
+        margin: 0;
+    }
+
+    .timeline-contenido p {
+        font-size: 0.8rem;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-card>div {
+        font-size: 1.3rem;
+        min-width: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    #contenido {
+        padding: 1rem;
+    }
 }
