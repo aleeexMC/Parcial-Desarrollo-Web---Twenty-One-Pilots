@@ -6,26 +6,32 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Calendar</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
+        
+        <input type="checkbox" name="checkMenu" id="checkMenu">
+        <label for="checkMenu" class="labelBotonMenu">
+            <i class="fa fa-navicon" id="btnMostrar"></i>
+        </label>
         <nav>
-            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
-                ☰
-                <span class="sr-only">Abrir menú</span>
-            </button>
-            <ul id="nav-list" class="nav-list">
+            <ul>
                 <li><a href="#">INTEGRANTES</a></li>
                 <li><a href="#">HISTORIA</a></li>
                 <li><a href="#">DISCOGRAFÍA</a></li>
                 <li><a href="#">GALERÍA</a></li>
-                <li id="contenedor_logo"><a href="#"><img src="img/Twenty-One-Pilots-Logo.png" alt="Logo" id="logo"></a></li>
+                <li id="contenedor_logo"><a href="#"><img src="img/Twenty-One-Pilots-Logo.png" alt="Logo" id="logo"></a>
+                </li>
                 <li><a href="#">NOTICIAS</a></li>
                 <li><a href="#">CALENDARIO</a></li>
                 <li><a href="#">NOSOTROS</a></li>
                 <li><a href="#">CONTACTO</a></li>
+                <li><label for="checkMenu" class="labelBotonMenu">CERRAR</label></li>
             </ul>
         </nav>
+        <div id="degradado_barra_nav"></div>
     </header>
     <div id="dates">
         <div id="date1">
@@ -66,15 +72,6 @@
         </div>
     </div>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const btn  = document.querySelector('.nav-toggle');
-        const list = document.getElementById('nav-list');
-        if (!btn || !list) return;
-        btn.addEventListener('click', () => {
-        const open = list.classList.toggle('open');
-        btn.setAttribute('aria-expanded', open);
-        });
-    });
 </script>
 </body>
 </html>
