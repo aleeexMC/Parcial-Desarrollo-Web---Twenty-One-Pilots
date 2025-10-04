@@ -1,5 +1,4 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
 @media screen and (min-width: 768px) {
     * {
         margin: 0;
@@ -14,10 +13,11 @@
 
     header nav {
         width: 100%;
-        height: 10vw;
+        height: 6vw;
         display: flex;
         align-items: center;
         background-color: black;
+        
     }
 
     header ul {
@@ -70,16 +70,16 @@
     #btnMostrar {
         background-color: black;
         color: white;
-        position: fixed;
+        position: absolute;
         cursor: pointer;
         font-size: 7vw;
         padding: 2%;
-        z-index: 10000;
-        top: 0;
-        left: 0;
     }
 
-
+    #btnMostrar {
+        margin-top: 2%;
+        margin-left: 2%;
+    }
 
     header nav {
         position: fixed;
@@ -90,8 +90,6 @@
         background-color: black;
         left: -40vw;
         transition: all 0.5s;
-        z-index: 9999;
-        top: 0;
     }
 
     #checkMenu:checked~nav {
@@ -147,3 +145,5 @@
         display: none;
     }
 }
+
+
